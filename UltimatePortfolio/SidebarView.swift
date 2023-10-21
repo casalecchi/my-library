@@ -17,7 +17,7 @@ struct SidebarView: View {
     var tagFilters: [Filter] {
         // fetched tags will be converted into filters
         tags.map { tag in
-            Filter(id: tag.id ?? UUID(), name: tag.name ?? "No name", icon: "tag", tag: tag)
+            Filter(id: tag.tagID, name: tag.tagName, icon: "tag", tag: tag)
         }
     }
     
@@ -35,6 +35,8 @@ struct SidebarView: View {
                 ForEach(tagFilters) { filter in
                     NavigationLink(value: filter) {
                         Label(filter.name, systemImage: filter.icon)
+                            // number of items inside each tag
+                            .badge(filter.tag?.tagActiveBooks.count ?? 0)
                     }
                 }
             }
