@@ -16,6 +16,8 @@
 		646744DF2AE372360003D68E /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646744DE2AE372360003D68E /* SidebarView.swift */; };
 		646744E12AE372420003D68E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646744E02AE372420003D68E /* DetailView.swift */; };
 		646744E32AE373780003D68E /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646744E22AE373780003D68E /* Filter.swift */; };
+		646744E52AE47B220003D68E /* Book-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646744E42AE47B220003D68E /* Book-CoreDataHelpers.swift */; };
+		646744E72AE47CD20003D68E /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646744E62AE47CD20003D68E /* Tag-CoreDataHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		646744DE2AE372360003D68E /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		646744E02AE372420003D68E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		646744E22AE373780003D68E /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		646744E42AE47B220003D68E /* Book-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		646744E62AE47CD20003D68E /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				646744DE2AE372360003D68E /* SidebarView.swift */,
 				646744CB2ADDA1AF0003D68E /* ContentView.swift */,
 				646744E22AE373780003D68E /* Filter.swift */,
+				646744E42AE47B220003D68E /* Book-CoreDataHelpers.swift */,
+				646744E62AE47CD20003D68E /* Tag-CoreDataHelpers.swift */,
 				646744E02AE372420003D68E /* DetailView.swift */,
 				646744D72ADDDFDC0003D68E /* Main.xcdatamodeld */,
 				646744DA2ADDE4700003D68E /* DataController.swift */,
@@ -157,12 +163,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				646744E32AE373780003D68E /* Filter.swift in Sources */,
+				646744E72AE47CD20003D68E /* Tag-CoreDataHelpers.swift in Sources */,
 				646744D92ADDDFDC0003D68E /* Main.xcdatamodeld in Sources */,
 				646744E12AE372420003D68E /* DetailView.swift in Sources */,
 				646744DB2ADDE4700003D68E /* DataController.swift in Sources */,
 				646744DF2AE372360003D68E /* SidebarView.swift in Sources */,
 				646744CC2ADDA1AF0003D68E /* ContentView.swift in Sources */,
 				646744CA2ADDA1AF0003D68E /* UltimatePortfolioApp.swift in Sources */,
+				646744E52AE47B220003D68E /* Book-CoreDataHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
