@@ -22,6 +22,11 @@ extension Book {
         creationDate ?? Date.now
     }
     
+    var bookTags: [Tag] {
+        let result = tags?.allObjects as? [Tag] ?? []
+        return result.sorted()
+    }
+    
     static var example: Book {
         // create an example book
         let controller = DataController(inMemory: true)
@@ -33,5 +38,18 @@ extension Book {
         book.priority = 2
         book.creationDate = .now
         return book
+    }
+}
+
+extension Book: Comparable {
+    public static func <(lhs: Book, rhs: Book) -> Bool {
+        let left = lhs.bookTitle.localizedLowercase
+        let right = rhs.bookTitle.localizedLowercase
+        
+        if left == right {
+            return lhs.bookCreationDate < rhs.bookCreationDate
+        } else {
+            return left < right
+        }
     }
 }
