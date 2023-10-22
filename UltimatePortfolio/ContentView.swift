@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    @EnvironmentObject var dataController: DataController
+    
+    var books: [Book] {
+        let filter = dataController.selectedFilter ?? .all
+        var allBooks: [Book]
+        
+        if let tag = filter.tag {
+            allBooks = tag.books?.allObjects as? [Book] ?? []
+        } else {
+            // all books - within the creation date is less than 1 week
+            let request = Book.fetchRequest()
+            // predicate will filter the request with some condition
+            request.predicate = NSPredicate(format: "creationDate > %@", filter.minCreationDate as NSDate)
+            // fetch the request using the viewContext
+            allBooks = (try? dataController.container.viewContext.fetch(request)) ?? []
         }
-        .padding()
+        
+        return allBooks.sorted()
+    }
+    
+    var body: some View {
+        List {
+            ForEach(books) { book in
+                Text(book.bookTitle)
+            }
+        }
+        .navigationTitle("Books")
     }
 }
 
