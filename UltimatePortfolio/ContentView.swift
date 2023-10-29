@@ -31,7 +31,7 @@ struct ContentView: View {
     var body: some View {
         List {
             ForEach(books) { book in
-                Text(book.bookTitle)
+                BookRow(book: book)
             }
         }
         .navigationTitle("Books")

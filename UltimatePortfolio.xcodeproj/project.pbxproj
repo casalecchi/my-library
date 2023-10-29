@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644484342AED87AB00434D54 /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644484332AED87AB00434D54 /* BookRow.swift */; };
 		646744CA2ADDA1AF0003D68E /* UltimatePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646744C92ADDA1AF0003D68E /* UltimatePortfolioApp.swift */; };
 		646744CC2ADDA1AF0003D68E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646744CB2ADDA1AF0003D68E /* ContentView.swift */; };
 		646744CE2ADDA1B00003D68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646744CD2ADDA1B00003D68E /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		644484332AED87AB00434D54 /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
 		646744C62ADDA1AF0003D68E /* UltimatePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimatePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646744C92ADDA1AF0003D68E /* UltimatePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimatePortfolioApp.swift; sourceTree = "<group>"; };
 		646744CB2ADDA1AF0003D68E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				646744C92ADDA1AF0003D68E /* UltimatePortfolioApp.swift */,
 				646744DE2AE372360003D68E /* SidebarView.swift */,
 				646744CB2ADDA1AF0003D68E /* ContentView.swift */,
+				644484332AED87AB00434D54 /* BookRow.swift */,
 				646744E22AE373780003D68E /* Filter.swift */,
 				646744E42AE47B220003D68E /* Book-CoreDataHelpers.swift */,
 				646744E62AE47CD20003D68E /* Tag-CoreDataHelpers.swift */,
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				646744E32AE373780003D68E /* Filter.swift in Sources */,
+				644484342AED87AB00434D54 /* BookRow.swift in Sources */,
 				646744E72AE47CD20003D68E /* Tag-CoreDataHelpers.swift in Sources */,
 				646744D92ADDDFDC0003D68E /* Main.xcdatamodeld in Sources */,
 				646744E12AE372420003D68E /* DetailView.swift in Sources */,
