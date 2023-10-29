@@ -26,6 +26,8 @@ struct SidebarView: View {
             Section("Smart Filters") {
                 ForEach(smartFilters) { filter in
                     NavigationLink(value: filter) {
+                        // NavLink go to ContentView because of the NavSplitView
+                        // and set the dataController.selectedFilter with the value passed
                         Label(filter.name, systemImage: filter.icon)
                     }
                 }
@@ -39,6 +41,7 @@ struct SidebarView: View {
                             .badge(filter.tag?.tagActiveBooks.count ?? 0)
                     }
                 }
+                .onDelete(perform: delete)
             }
         }
         .toolbar {
@@ -48,6 +51,13 @@ struct SidebarView: View {
             } label: {
                 Label("Add sample data", systemImage: "flame")
             }
+        }
+    }
+    
+    func delete(_ offsets: IndexSet) {
+        for offset in offsets {
+            let item = tags[offset]
+            dataController.delete(item)
         }
     }
 }
